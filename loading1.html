@@ -220,52 +220,7 @@
         .log-line .err  { color: var(--log-err); }
         .log-line .hi   { color: #fff; }
 
-        /* progress bar */
-        #progress-area {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-        #progress-header {
-            display: flex;
-            justify-content: space-between;
-            font-size: 10px;
-            letter-spacing: 2px;
-            color: rgba(200,184,154,0.45);
-            text-transform: uppercase;
-        }
-        #progress-status { color: var(--red2); }
-        #progress-track {
-            width: 340px;
-            height: 2px;
-            background: rgba(255,255,255,0.07);
-            position: relative;
-        }
-        #progress-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, var(--red), var(--amber));
-            box-shadow: 0 0 8px var(--red2);
-            transition: width 0.5s ease;
-            position: relative;
-        }
-        #progress-fill::after {
-            content: '';
-            position: absolute;
-            right: 0; top: -1px; bottom: -1px;
-            width: 12px;
-            background: linear-gradient(90deg, transparent, rgba(255,180,60,0.8));
-        }
-        #dl-file {
-            font-size: 10px;
-            letter-spacing: 1px;
-            color: rgba(200,184,154,0.3);
-            margin-top: 4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 340px;
-        }
+
 
         /* ── BOTTOM RIGHT SERVER INFO ── */
         #server-info {
@@ -328,16 +283,7 @@
     <!-- BOTTOM LEFT LOG -->
     <div id="log-panel">
         <div id="log-lines"></div>
-        <div id="progress-area">
-            <div id="progress-header">
-                <span id="progress-status">ИНИЦИАЛИЗАЦИЯ...</span>
-                <span id="progress-pct">0%</span>
-            </div>
-            <div id="progress-track">
-                <div id="progress-fill"></div>
-            </div>
-            <div id="dl-file">Подготовка соединения...</div>
-        </div>
+
     </div>
 
     <!-- BOTTOM RIGHT SERVER INFO -->
